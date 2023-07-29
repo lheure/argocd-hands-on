@@ -14,3 +14,4 @@ spec:
     path: namespace-manager
     repoURL: git@github.com:lheure/argocd-hands-on.git
     targetRevision: main
+
