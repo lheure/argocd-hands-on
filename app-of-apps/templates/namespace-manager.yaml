@@ -11,6 +11,6 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: hands-on
   source:
-    path: app-of-apps
+    path: namespace-manager
     repoURL: git@github.com:lheure/argocd-hands-on.git
     targetRevision: HEAD
