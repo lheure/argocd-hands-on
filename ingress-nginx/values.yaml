@@ -1,0 +1,19 @@
+ingress-nginx:
+  controller:
+    electionID: ingress-controller-leader
+    replicaCount: 2
+    service:
+      labels:
+        myapp.io/phase: alpha
+    metrics:
+      enabled: true
+    config:
+      http2-max-concurrent-streams: 16384
+      # This should stay in sync with CPU requests (e.g. 1 upto 1000 milli-cores)
+      worker-processes: 1
+#    resources:
+#      requests:
+#        cpu: 100m
+#        memory: &MEMORY 90Mi
+#      limits:
+#        memory: *MEMORY
