@@ -5,6 +5,9 @@ ingress-nginx:
     service:
       labels:
         myapp.io/phase: alpha
+      nodePorts:
+        http: 30080
+        https: 30443
     metrics:
       enabled: true
     config:
