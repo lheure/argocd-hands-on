@@ -16,3 +16,9 @@ spec:
     repoURL: {{ .Values.source.repoUrl }}
     path: ingress-nginx
     targetRevision: main
+  ignoreDifferences:
+    # Mute out-of-sync sign after a successful sync
+    - group: admissionregistration.k8s.io
+      kind: ValidatingWebhookConfiguration
+      jsonPointers:
+        - /webhooks/0/admissionReviewVersions
