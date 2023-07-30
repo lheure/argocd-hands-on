@@ -1,0 +1,9 @@
+apiVersion: v2
+name: monitoring
+type: application
+version: 0.0.1
+
+dependencies:
+  - name: kubernetes-dashboard
+    version: 7.0.3
+    repository: https://kubernetes.github.io/dashboard/
