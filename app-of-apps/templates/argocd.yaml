@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: argocd
+  namespace: argocd
+spec:
+  project: hands-on
+  destination:
+    namespace: argocd
+    server: {{ .Values.spec.destination.server }}
+#  syncPolicy:
+#    automated:
+#      prune: true
+#      selfHeal: true
+  source:
+    repoURL: {{ .Values.source.repoUrl }}
+    path: argocd
+    targetRevision: main
+#  ignoreDifferences:
+#    # Mute out-of-sync sign after a successful sync
+#    - group: admissionregistration.k8s.io
+#      kind: ValidatingWebhookConfiguration
+#      jsonPointers:
+#        - /webhooks/0/admissionReviewVersions
