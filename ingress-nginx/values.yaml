@@ -9,7 +9,7 @@ ingress-nginx:
         http: 30080
         https: 30443
     metrics:
-      enabled: true
+      enabled: false
     config:
       http2-max-concurrent-streams: 16384
       # This should stay in sync with CPU requests (e.g. 1 upto 1000 milli-cores)
