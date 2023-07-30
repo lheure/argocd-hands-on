@@ -1,11 +1,11 @@
 apiVersion: v2
-appVersion: v0.18.2
+appVersion: v0.23.0
 kubeVersion: ">=1.16.0-0"
 name: sealed-secrets
 type: application
-version: 2.6.4
+version: 2.11.0
 
 dependencies:
   - name: sealed-secrets
-    version: 2.6.4
+    version: 2.11.0
     repository: https://bitnami-labs.github.io/sealed-secrets/
